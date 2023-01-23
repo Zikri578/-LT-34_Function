@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function - Javascript</title>
+    <script src="Function.js"></script>
+</head>
+
+<body>
+    <!-- <button onclick="pertambahan()">Tambah</button> -->
+    <button onclick="addSubtractNumbers()">Add/Subtract Numbers</button>
+    <button onclick="printNames()">Print Nama </button>
+
+    <script>
+        function addSubtractNumbers() {
+            // membuat sebuah variabel num1 untuk input angka pertama
+            let num1 = parseFloat(prompt("Masukkan Angka Pertama :"));
+
+            // membuat sebuah variabel num2 untuk input angka kedua
+            let num2 = parseFloat(prompt("Masukkan Angka Kedua :"));
+
+            // membuat sebuah variabel operator untuk memilih operasi arimatika yang diinginkan
+            let operator = prompt("Pilih operator : Tambah(+) or Kurang(-) or Kali(*) or SisaBagi/Modulus(%) or Bagi(/)");
+
+            // membuat sebuah variabel untuk melakukan operasi kabataku
+            let result;
+
+            // melakukan pengkondisian ketika dia + maka ditambahkan
+            if (operator === "+") {
+                result = num1 + num2;
+
+                // ketika pengkondisian - maka dikurangkan
+            } else if (operator === "-") {
+                result = num1 - num2;
+
+                // ketika pengkondisian * maka dikalikan
+            } else if (operator === "*") {
+                result = num1 * num2;
+
+                // ketika pengkondisian % maka sisa bagi
+            } else if (operator === "%") {
+                result = num1 % num2;
+
+                // ketika pengkondisian / maka di bagikan
+            } else if (operator === "/") {
+                result = num1 / num2;
+
+                // ketika pengkondisian tersebut tidak ada diatas maka operator tersebut tidak ada
+            } else{
+                result = "Invalid operator!";
+            }
+
+            // menampilkan hasilnya dalam bentuk alert
+            alert("Hasilnya : " + result);
+        }
+    </script>
+</body>
+
+</html>
